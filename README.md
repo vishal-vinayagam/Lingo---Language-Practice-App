@@ -1,4 +1,4 @@
-# Lingo - Language Practice App
+# Lingo - Language Practice App - https://lingo-language-practice.netlify.app/
 
 A mobile-first React application for language learning practice with voice recording, progress tracking, and daily exercises.
 
