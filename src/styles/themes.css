@@ -1,0 +1,124 @@
+/* Theme variable overrides for each theme class applied to <html> (ThemeContext sets class on documentElement) */
+
+:root {
+  /* Fallback variables (already present in index.css) */
+}
+
+.theme-light {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --text: #0f1724;
+  --muted: #6b7280;
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-color-rgb: 37,99,235;
+  --primary-rgb: 37,99,235;
+  --border: #e9ecef;
+  --light-gray: #f8f9fa;
+  --splash-bg: var(--light-gray);
+  /* map legacy variable names used across components */
+  --white: #ffffff;
+  --text-light: #222222;
+  --text-dark: #111111;
+  --gray: #e9ecef;
+  --dark-card: #f4f4f4;
+}
+
+.theme-dark {
+  --bg: #0b1220;
+  --surface: #0f1724;
+  --card: #111827;
+  --text: #e6eef8;
+  --muted: #9aa4b2;
+  --primary-color: #60a5fa;
+  --primary-dark: #3b82f6;
+  --primary-color-rgb: 96,165,250;
+  --primary-rgb: 96,165,250;
+  --border: #2a2a2a;
+  --light-gray: #111214;
+  --splash-bg: var(--bg);
+  /* map legacy variable names used across components */
+  --white: #0f1113; /* avoids white surfaces in dark theme */
+  --text-light: #f1f3f5;
+  --text-dark: #111214;
+  --gray: #2a2a2a;
+  --dark-card: #2d2d2d;
+}
+
+.theme-melange {
+  --bg: #fbfefe;
+  --surface: #f4f9f9;
+  --card: #ffffff;
+  --text: #0f3b36;
+  --muted: #4b6b66;
+  --primary-color: #0ea5a4;
+  --primary-dark: #087f7f;
+  --primary-color-rgb: 14,165,164;
+  --primary-rgb: 14,165,164;
+  --border: #eae8df;
+  --light-gray: #f2f1ea;
+  --splash-bg: var(--light-gray);
+  /* map legacy variable names used across components */
+  --white: #ffffff;
+  --text-light: #20332b;
+  --text-dark: #102218;
+  --gray: #efece0;
+  --dark-card: #f5f3ea;
+}
+
+/* Map the common semantic variables to existing usage in CSS */
+.theme-light, .theme-dark, .theme-melange {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Helpful component-level variables used throughout the app */
+.theme-light, .theme-dark, .theme-melange {
+  --background: var(--bg);
+  --surface-color: var(--surface);
+  --card-bg: var(--card);
+  --text-color: var(--text);
+  --muted-text: var(--muted);
+  --border-color: var(--border);
+  --splash-background: var(--splash-bg);
+}
+
+/* Semantic aliases used by components (map hard-coded colors to variables) */
+.theme-light {
+  --success: #4CAF50;
+  --success-dark: #2E7D32;
+  --info: #2196F3;
+  --danger: #f44336;
+  --warning: #ffb020;
+  /* rgb variants for rgba usage */
+  --success-rgb: 76,175,80;
+  --info-rgb: 33,150,243;
+  --danger-rgb: 244,67,54;
+  --warning-rgb: 255,176,32;
+}
+
+.theme-dark {
+  --success: #45b06b;
+  --success-dark: #2E7D32;
+  --info: #4ca9ff;
+  --danger: #ff6b6b;
+  --warning: #ffb020;
+  --success-rgb: 69,176,107;
+  --info-rgb: 76,169,255;
+  --danger-rgb: 255,107,107;
+  --warning-rgb: 255,176,32;
+}
+
+.theme-melange {
+  --success: #8a9a5b;
+  --success-dark: #6f7d49;
+  --info: #3a87c9;
+  --danger: #d9534f;
+  --warning: #e6b032;
+  --success-rgb: 138,154,91;
+  --info-rgb: 58,135,201;
+  --danger-rgb: 217,83,79;
+  --warning-rgb: 230,176,50;
+}
+

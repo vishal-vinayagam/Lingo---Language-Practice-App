@@ -1,0 +1,60 @@
+.route-loader-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.32);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9998;
+}
+
+.route-loader-content {
+  background: var(--splash-background, rgba(255,255,255,0.95));
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.route-loader-logo {
+  width: 112px;
+  height: 112px;
+  animation: loaderLogo 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes loaderLogo {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+
+/* Suspense fallback logo */
+.suspense-fallback {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.52);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9999;
+}
+
+.suspense-logo {
+  width: 120px;
+  height: 120px;
+  animation: loaderLogo 1.6s ease-in-out infinite alternate;
+}
+
+/* Dark theme variant: slightly darker translucent overlay */
+.theme-dark .suspense-fallback {
+  background: rgba(0,0,0,0.5);
+}
+
+.theme-dark .route-loader-overlay {
+  background: rgba(0,0,0,0.36);
+}

@@ -1,0 +1,321 @@
+.home-container {
+  padding-bottom: var(--spacing-xl);
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+}
+
+.home-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-date {
+  font-size: 14px;
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+/* Quote Section */
+.daily-quote {
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 80px;
+  opacity: 0.1;
+  transform: rotate(15deg);
+}
+
+.quote-text {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+  padding-right: var(--spacing-lg);
+}
+
+.quote-author {
+  font-size: 14px;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Sentence Section */
+.daily-sentence {
+  position: relative;
+}
+
+.sentence-icon {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 60px;
+  opacity: 0.1;
+}
+
+.sentence-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: rgba(255, 107, 107, 0.05);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-color);
+}
+
+.sentence-meaning {
+  font-size: 14px;
+  color: var(--dark-gray);
+  line-height: 1.5;
+  padding: var(--spacing-sm);
+  background-color: var(--light-gray);
+  border-radius: var(--radius-md);
+}
+
+/* Story Section */
+.daily-story {
+  position: relative;
+}
+
+.story-icon {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 60px;
+  opacity: 0.1;
+}
+
+.story-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.story-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Practice CTA */
+.practice-cta-container {
+  margin: var(--spacing-xl) 0;
+}
+
+.practice-cta {
+  font-size: 18px;
+  font-weight: 700;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+}
+
+.practice-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), 0 10px 20px rgba(255, 107, 107, 0.3);
+}
+
+/* Videos Section */
+.videos-section {
+  margin-top: var(--spacing-xl);
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.video-card {
+  background-color: var(--card-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border: 1px solid var(--border-color);
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-thumbnail {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.video-card:hover .video-thumbnail img {
+  transform: scale(1.05);
+}
+
+.video-play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.video-card:hover .video-play-overlay {
+  opacity: 1;
+}
+
+.video-title {
+  padding: var(--spacing-md);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Random Surprise Button */
+.random-surprise-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.random-surprise-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.surprise-icon {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Modal Styles */
+.random-quote-modal {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.random-quote-text {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-color);
+}
+
+.random-quote-author {
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.video-modal {
+  width: 100%;
+  max-width: 800px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 28px;
+  }
+  
+  .quote-text {
+    font-size: 16px;
+  }
+  
+  .sentence-text {
+    font-size: 18px;
+  }
+  
+  .practice-cta {
+    font-size: 16px;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  .random-surprise-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 90px;
+  }
+}
+
+@media (min-width: 768px) {
+  .videos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

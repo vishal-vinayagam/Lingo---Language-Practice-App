@@ -1,0 +1,386 @@
+.book-container {
+  padding-bottom: var(--spacing-xl);
+}
+
+.book-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+}
+
+.book-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.book-subtitle {
+  font-size: 16px;
+  color: var(--dark-gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Learn Vocab button */
+.vocab-btn {
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--primary-color);
+  background: linear-gradient(90deg, rgba(var(--primary-color-rgb),0.08), rgba(var(--primary-color-rgb),0.12));
+  color: var(--primary-color);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.vocab-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Progress Bar */
+.book-progress {
+  background-color: var(--card-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ... rest of your existing CSS preserved, slight alignment tweaks ... */
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: var(--gray);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--spacing-sm);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+}
+
+.progress-stats {
+  font-size: 12px;
+  color: var(--dark-gray);
+  text-align: center;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+/* Book Content Layout */
+.book-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+/* Chapters List */
+.chapters-list {
+  background-color: var(--card-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+}
+
+.chapters-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.chapter-item {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.chapter-item:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.05);
+  transform: translateX(4px);
+}
+
+.chapter-item.selected {
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  border-color: var(--primary-color);
+  transform: translateX(8px);
+}
+
+.chapter-item.completed {
+  border-left: 4px solid var(--success);
+}
+
+.chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.chapter-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-color);
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.chapter-level {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chapter-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
+.chapter-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--dark-gray);
+}
+
+/* Chapter Content */
+.chapter-content {
+  background-color: var(--card-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+}
+
+.chapter-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.chapter-content-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  flex: 1;
+  min-width: 200px;
+}
+
+.complete-btn {
+  padding: 8px 16px;
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.complete-btn:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.2);
+  transform: translateY(-2px);
+}
+
+.complete-btn.completed {
+  background-color: rgba(var(--success-rgb), 0.1);
+  color: var(--success);
+  border-color: var(--success);
+}
+
+/* Chapter Info & Text */
+.chapter-info {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.chapter-level-badge,
+.chapter-duration-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.chapter-level-badge {
+  background-color: rgba(var(--primary-color-rgb), 0.1);
+  color: var(--primary-color);
+}
+
+.chapter-duration-badge {
+  background-color: rgba(var(--info-rgb), 0.1);
+  color: var(--info);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chapter-text {
+  margin-bottom: var(--spacing-xl);
+}
+
+.chapter-text p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.chapter-exercises {
+  background-color: rgba(var(--primary-color-rgb), 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border-left: 4px solid var(--primary-color);
+}
+
+.chapter-exercises h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.chapter-exercises h3:before {
+  content: '💪';
+  font-size: 20px;
+}
+
+.chapter-exercises ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chapter-exercises li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.chapter-exercises li:before {
+  content: '→';
+  color: var(--primary-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive layout: two columns on wider screens */
+@media (min-width: 768px) {
+  .book-content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-title {
+    font-size: 28px;
+  }
+
+  .chapter-content-header {
+    flex-direction: column;
+  }
+
+  .chapter-content-header h2 {
+    font-size: 20px;
+  }
+
+  .complete-btn {
+    width: 100%;
+  }
+}
+
+/* Inline Vocabulary panel shown within Book page */
+.vocab-inline {
+  margin-top: var(--spacing-lg);
+  background: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.vocab-inline .close-vocab {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  float: right;
+}
+
+.vocab-inline .close-vocab:hover {
+  background: var(--bg-hover);
+}
+
+/* When Vocabulary is embedded inline, avoid full-page centering from Vocabulary.css */
+.vocab-inline .vocab-page {
+  position: relative;
+  padding: 0;
+  min-height: auto;
+  display: block;
+  align-items: initial;
+  justify-content: initial;
+}
+
+.vocab-inline .vocab-card {
+  max-width: 100%;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.vocab-inline .vocab-body { padding: 12px; }
+.vocab-inline .vocab-top { padding: 12px; }
+.vocab-inline .open-saved-btn { right: 8px; bottom: 8px; }
