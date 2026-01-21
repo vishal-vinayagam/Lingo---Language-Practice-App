@@ -16,9 +16,4 @@ A mobile-first React application for language learning practice with voice recor
 - 🔔 Custom toast notifications
 - 🎯 Daily quotes, sentences, and micro-stories
 
-## Prerequisites
-
-- Node.js 16+ and npm
-- Firebase account
-- Modern web browser with microphone access
 
